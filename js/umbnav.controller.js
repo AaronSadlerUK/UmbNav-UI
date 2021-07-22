@@ -146,7 +146,8 @@
             icon: data.icon || "icon-link",
             published: data.published,
             naviHide: data.naviHide,
-            culture: data.culture
+            culture: data.culture,
+            includeChildNodes: data.includeChildren
         }
     }
 }
