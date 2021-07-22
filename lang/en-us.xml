@@ -15,5 +15,7 @@
 		<key alias="visibility">Visibility</key>
 		<key alias="hideLoggedIn">Hide if member is logged in</key>
 		<key alias="hideLoggedOut">Hide if member is logged out</key>
+		<key alias="includeChildren">Include children</key>
+		<key alias="includeChildNodes">Include child nodes</key>
 	</area>
 </language>

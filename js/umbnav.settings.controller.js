@@ -8,6 +8,7 @@
     vm.toggleshowNoreferrer = toggleshowNoreferrer;
     vm.toggleDisplayLoggedIn = toggleDisplayLoggedIn;
     vm.toggleDisplayLoggedOut = toggleDisplayLoggedOut;
+    vm.toggleChildren = toggleChildren;
     vm.labels = {};
     localizationService.localizeMany(['defaultdialogs_openInNewWindow']).then(function (data) {
         vm.labels.openInNewWindow = data[0];
@@ -23,6 +24,9 @@
     });
     localizationService.localizeMany(['umbnav_hideLoggedOut']).then(function (data) {
         vm.labels.hideLoggedOut = data[0];
+    });
+    localizationService.localizeMany(['umbnav_includeChildNodes']).then(function (data) {
+        vm.labels.includeChildNodes = data[0];
     });
     if (!$scope.model.title) {
         localizationService.localize('defaultdialogs_selectLink').then(function (value) {
@@ -45,6 +49,7 @@
     $scope.showNoopener = $scope.model.hideNoopener !== true;
     $scope.showNoreferrer = $scope.model.hideNoreferrer!== true;
     $scope.showAnchor = $scope.model.hideAnchor !== true;
+    $scope.showIncludeChildren = $scope.model.hideIncludeChildren !== true;
     // this ensures that we only sync the tree once and only when it's ready
     var oneTimeTreeSync = {
         executed: false,
@@ -111,6 +116,7 @@
         vm.openInNewWindow = $scope.model.target.target === '_blank';
         vm.hideLoggedIn = $scope.model.target.hideLoggedIn;
         vm.hideLoggedOut = $scope.model.target.hideLoggedOut;
+        vm.includeChildren = $scope.model.target.includeChildren;
         vm.showNoopener = $scope.model.target.noopener === 'noopener' && $scope.model.target.id === null || $scope.model.target.udi === null;
         vm.showNoreferrer = $scope.model.target.noreferrer === 'noreferrer' && $scope.model.target.id === null || $scope.model.target.udi === null;
     } else if (dialogOptions.anchors) {
@@ -238,6 +244,9 @@
     }
     function toggleDisplayLoggedOut(model, value) {
         $scope.model.target.hideLoggedOut = model ? true : false;
+    }
+    function toggleChildren(model, value) {
+        $scope.model.target.includeChildren = model ? true : false;
     }
     function close() {
         if ($scope.model && $scope.model.close) {

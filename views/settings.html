@@ -59,6 +59,13 @@
                         </umb-checkbox>
                     </umb-control-group>
 
+                    <umb-control-group ng-if="showIncludeChildren" label="@umbnav_includeChildren">
+                        <umb-checkbox model="vm.includeChildren"
+                                      on-change="vm.toggleChildren(model, value)"
+                                      text="{{vm.labels.includeChildNodes}}">
+                        </umb-checkbox>
+                    </umb-control-group>
+
                     <umb-control-group ng-if="showNoopener || showNoreferrer" label="@umbnav_seo">
                         <umb-checkbox ng-if="showNoopener" model="vm.showNoopener"
                                       on-change="vm.toggleshowNoopener(model, value)"
