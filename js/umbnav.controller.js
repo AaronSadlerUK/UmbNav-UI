@@ -41,7 +41,7 @@
         $scope.$broadcast('angular-ui-tree:expand-all');
     };
 
-    $scope.showButtons = function () {
+    $scope.showExpandCollapseButtons = function () {
         const maxDepth = dialogOptions.config.maxDepth;
         if (maxDepth === 0 || maxDepth > 1) {
             return true;
