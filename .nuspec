@@ -4,18 +4,17 @@
 		<id>Our.Umbraco.UmbNav.Web</id>
 		<version>1.0.0-pre</version>
 		<title>UmbNav Web</title>
-		<Description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</Description>
-		<PackageTags>umbraco, umbraco-cms, UmbNav, UmbNav-V8</PackageTags>
-		<RepositoryUrl>https://github.com/AaronSadlerUK/Our.Umbraco.UmbNav</RepositoryUrl>
-		<RepositoryType>Git</RepositoryType>
-		<PackageIcon>UmbNav-Logo.png</PackageIcon>
-		<PackageIconUrl />
-		<PackageProjectUrl>https://github.com/AaronSadlerUK/Our.Umbraco.UmbNav</PackageProjectUrl>
-		<Authors>Aaron Sadler</Authors>
-		<Company>UmbHost Limited</Company>
-		<Copyright>2021 UmbHost Limited</Copyright>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<authors>Aaron Sadler</authors>
+		<owners>UmbHost Limited</owners>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/AaronSadlerUK/Our.Umbraco.UmbNav-V8</projectUrl>
+		<icon>UmbNav-Logo.png</icon>
+		<summary>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</summary>
+		<description>A flexible, draggable link picker for constructing site navigation menus, big or small, in Umbraco</description>
+		<releaseNotes><![CDATA[Initial Release]]></releaseNotes>
+		<copyright>2021 UmbHost Limited</copyright>
+		<tags>umbraco, umbraco-cms, UmbNav, UmbNav-V8</tags>
 		<dependencies>
 			<group>
 				<dependency id="Our.Umbraco.UmbNav.Core" version="[1.0.0-alpha.3,1.0.0)" />
